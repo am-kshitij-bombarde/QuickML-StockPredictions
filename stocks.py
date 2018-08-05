@@ -1,5 +1,3 @@
-#This is a Basic scrpt that predicts upcoming stock prices of Google Inc. using Regression Learning and Data Scince Concepts
-
 import quandl, math
 import numpy as np
 import pandas as pd
@@ -26,5 +24,5 @@ X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_
 
 clf = LinearRegression(n_jobs=-1)
 clf.fit(X_train, y_train)
-confidence = clf.score(X_test, y_test)
-print(confidence)
+accuracy = clf.score(X_test, y_test)
+print(accuracy)
